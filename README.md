@@ -1,11 +1,18 @@
-# homebrew-jubako
+# homebrew-tap
 
-Homebrew tap for [Jubako](https://github.com/snaka/jubako) — a macOS-native OSS disk analyzer.
+snaka's personal Homebrew tap.
+
+## Casks
+
+| Cask | Description | Source |
+|---|---|---|
+| `jubako` | macOS-native disk analyzer | [snaka/jubako](https://github.com/snaka/jubako) |
 
 ## Install
 
 ```bash
-brew install --cask snaka/jubako/jubako
+brew install --cask snaka/tap/jubako
 ```
 
-(Once the first release is published. The Cask formula will live under `Casks/jubako.rb`.)
+(`brew` reads this as: tap `snaka/tap` → fetch repo `snaka/homebrew-tap` →
+install cask `jubako` from `Casks/jubako.rb`.)
