@@ -1,6 +1,6 @@
 cask "jubako" do
-  version "0.2.0"
-  sha256 "d05f4e73edf3f55ef69c309a283ab786f07f7973d182b30c03ad8416da85318e"
+  version "0.3.0"
+  sha256 "afae79957b68e4c1d9f952bbe27086d6cedc2c9989b27f8d8315c2f9e040de95"
 
   url "https://github.com/snaka/jubako/releases/download/v#{version}/Jubako-#{version}.dmg"
   name "Jubako"
