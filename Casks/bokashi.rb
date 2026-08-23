@@ -7,7 +7,7 @@ cask "bokashi" do
   desc "Privacy-aware screenshot tool for macOS"
   homepage "https://github.com/snaka/Bokashi"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Bokashi.app"
 

@@ -7,7 +7,7 @@ cask "invixray" do
   desc "Menu bar app that flags invisible Unicode used in LLM prompt injection"
   homepage "https://github.com/snaka/invixray"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Invixray.app"
 
