@@ -1,6 +1,6 @@
 cask "kelpie" do
-  version "0.1.4"
-  sha256 "d409bb0a2f9c32a23f9bf1640b980f8fe5e22a120a7462873625c25cbf84e476"
+  version "0.1.5"
+  sha256 "4ecadf457664022df6cfb9b8deb453eee38e08d9b2489e04f80f5638ca4594d9"
 
   url "https://github.com/snaka/kelpie/releases/download/v#{version}/Kelpie-#{version}.dmg"
   name "Kelpie"
