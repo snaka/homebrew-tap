@@ -1,6 +1,6 @@
 cask "bokashi" do
-  version "0.11.0"
-  sha256 "02750e249a88903fd17bc9b6a75176d7a66c868a7e84daa1c8d2c6c5d1bd5281"
+  version "0.12.0"
+  sha256 "7113375b74e7ae4adf9f0c4b18399a7c2449f942f1baa84c8d4f88155968efba"
 
   url "https://github.com/snaka/Bokashi/releases/download/v#{version}/Bokashi-#{version}.dmg"
   name "Bokashi"
