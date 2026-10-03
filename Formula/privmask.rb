@@ -8,18 +8,27 @@ class Privmask < Formula
 
   depends_on macos: :ventura
 
+  # The NER model that finds Japanese personal names. It has a release of its
+  # own, because it is trained locally, not in CI; privmask's release workflow
+  # pins the same sha256. Change both together.
+  resource "ner" do
+    url "https://github.com/snaka/privmask/releases/download/ner-model-1/privmask-ner-1.tar.gz"
+    sha256 "9c68188f141e0fe46473fbd21fadb5ddc652fc75a73055f22e432800732f5f88"
+  end
+
   def install
     bin.install "privmask"
     doc.install "README.md"
+    resource("ner").stage { (share/"privmask/ner").install Dir["*"] }
   end
 
   def caveats
     <<~EOS
-      Japanese personal names are found only by Apple Intelligence's on-device
-      model, which needs macOS 26 with Apple Intelligence enabled. Without it,
-      names are not detected at all. privmask says so on stderr whenever the
-      model did not run — read those warnings rather than assuming the text was
-      masked.
+      Japanese personal names are found by a trained NER model installed with
+      privmask, on every supported macOS. On macOS 26 with Apple Intelligence
+      enabled, the on-device language model adds to it. privmask says on stderr
+      whenever a layer did not run — read those warnings rather than assuming
+      the text was masked.
 
       Register your own terms (customer names, project code names) one per line:
         ~/.config/privmask/terms.txt
