@@ -1,9 +1,9 @@
 class Privmask < Formula
   desc "Mask personal information in text before you share it, on device"
   homepage "https://github.com/snaka/privmask"
-  url "https://github.com/snaka/privmask/releases/download/v0.4.0/privmask-0.4.0-macos-universal.tar.gz"
-  version "0.4.0"
-  sha256 "42c7685a83e7a5c0099d95f36b5a21ef1ab42e949ecc479b34085e56f8ea90c6"
+  url "https://github.com/snaka/privmask/releases/download/v0.5.0/privmask-0.5.0-macos-universal.tar.gz"
+  version "0.5.0"
+  sha256 "eb07da8b627e9211fab2ca0d83fac18114a47d95bea269adb24b153d4c2d15f1"
   license "MIT"
 
   depends_on macos: :ventura
