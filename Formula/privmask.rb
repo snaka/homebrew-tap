@@ -47,5 +47,13 @@ class Privmask < Formula
     assert_match "[PHONE_1]", output
     assert_match "[EMAIL_1]", output
     refute_match "090-1234-5678", output
+
+    # The NER model must be found where this formula installs it, beside the
+    # real executable in share/privmask/ner.
+    report = pipe_output(
+      "#{bin}/privmask --json --no-model --no-dictionary 2>/dev/null",
+      "担当は佐藤さんです。\n",
+    )
+    assert_match '"ner" : "used"', report
   end
 end
