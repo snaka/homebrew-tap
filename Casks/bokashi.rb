@@ -1,6 +1,6 @@
 cask "bokashi" do
-  version "0.12.0"
-  sha256 "7113375b74e7ae4adf9f0c4b18399a7c2449f942f1baa84c8d4f88155968efba"
+  version "0.13.0"
+  sha256 "ee336d7a80079edeff8f9614383267a8ba8a336ea2146835c08e3f8ce7603bb2"
 
   url "https://github.com/snaka/Bokashi/releases/download/v#{version}/Bokashi-#{version}.dmg"
   name "Bokashi"
@@ -8,6 +8,8 @@ cask "bokashi" do
   homepage "https://github.com/snaka/Bokashi"
 
   depends_on macos: :tahoe
+  # Brings the Japanese name model, which the app does not bundle.
+  depends_on formula: "snaka/tap/privmask"
 
   app "Bokashi.app"
 
